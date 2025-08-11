@@ -1,0 +1,34 @@
+body {
+    background-color: #272727;
+    color: #fefefed5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    justify-self: center;
+}
+
+#intro {
+    justify-self: center;
+}
+
+#socials {
+    justify-self: center;
+}
+
+li a {
+    color:aliceblue;
+}
+
+li a:visited {
+    color:aliceblue;
+}
+
+
+#headshot {
+    justify-self: center;
+}
+
+footer {
+    justify-self: center;
+}
