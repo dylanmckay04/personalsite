@@ -1,34 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-tertiary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --neon-cyan: #00ffff;
+    --neon-pink: #ff00ff;
+    --neon-green: #00ff41;
+    --neon-blue: #0080ff;
+    --accent-glow: 0 0 20px rgba(0, 255, 255, 0.5);
+    --shadow-glow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #272727;
-    color: #fefefed5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 header {
-    justify-self: center;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 2rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-glow);
 }
 
-#intro {
-    justify-self: center;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--accent-glow);
+    letter-spacing: -0.02em;
 }
 
-#socials {
-    justify-self: center;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    gap: 3rem;
 }
 
-li a {
-    color:aliceblue;
+section {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-li a:visited {
-    color:aliceblue;
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
+section:hover::before {
+    left: 100%;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), transparent);
+    border-radius: 1px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+section a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+section a:hover {
+    color: var(--neon-pink);
+}
 
 #headshot {
-    justify-self: center;
+    text-align: center;
+    margin: 2rem 0;
 }
 
+#headshot img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: var(--accent-glow);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+#headshot img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+    border-color: var(--neon-pink);
+}
+
+
+#socials ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#socials li {
+    position: relative;
+}
+
+#socials li a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(0, 128, 255, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+#socials li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+#socials li a:hover::before {
+    left: 100%;
+}
+
+#socials li a:hover {
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(0, 128, 255, 0.2));
+    border-color: var(--neon-cyan);
+    box-shadow: var(--accent-glow);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+#socials li a:visited {
+    color: var(--neon-cyan);
+}
+
+
 footer {
-    justify-self: center;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    main {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+    
+    section {
+        padding: 2rem;
+    }
+    
+    #headshot img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #socials ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #socials li a {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--neon-cyan), var(--neon-blue));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--neon-pink), var(--neon-cyan));
 }
