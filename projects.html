@@ -1,23 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Dylan McKay | Software Engineer</title>
-    </head>
-        <body>
-        <header>
-            <h1>Dylan McKay | Software Engineer</h1>
-        </header>
-        <main>
-            <section id="projects">
-                <h2>Projects</h2>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Dylan McKay | All rights reserved.</p>
-        </footer>
-        </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pfp.jfif">
+    <title>Projects | Dylan McKay</title>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <a class="nav-logo" href="index.html">Dylan McKay</a>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact" class="cta">Hire Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <section id="hero" style="padding-bottom: 3rem;">
+          <p class="hero-eyebrow">Portfolio</p>
+          <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.2rem);">All Projects.</h1>
+          <p class="hero-bio">
+            Every project is deployed, documented, and built with deliberate
+            technical decisions. Click any card to explore the live demo or API docs.
+          </p>
+        </section>
+
+        <section id="projects" style="border-top: 1px solid var(--border); padding-top: 3rem;">
+          <div class="projects-list">
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">DevTrack</span>
+                  <span class="project-badge">Featured</span>
+                </div>
+                <p class="project-desc">
+                  A full-stack job application tracker for developers. Features a
+                  kanban board with four status columns, real-time WebSocket sync,
+                  Celery + Redis scheduled email reminders, Cloudflare R2 document
+                  storage, and an analytics dashboard. Includes a pytest test suite
+                  covering authentication and CRUD operations.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Celery</span>
+                  <span class="project-tag">Redis</span>
+                  <span class="project-tag">WebSockets</span>
+                  <span class="project-tag">Cloudflare R2</span>
+                  <span class="project-tag">Docker</span>
+                  <span class="project-tag">pytest</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://dev-track-bice.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://devtrack-production-5644.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/DevTrack" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">Fading Visions</span>
+                </div>
+                <p class="project-desc">
+                  A full-stack photo gallery app that lets users curate aesthetic
+                  collections using the Unsplash API. Search by aesthetic name and
+                  receive a curated gallery. Features gallery management with a
+                  many-to-many join table data model, JWT authentication, and
+                  bcrypt-sha256 password hashing.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Unsplash API</span>
+                  <span class="project-tag">SQLAlchemy</span>
+                  <span class="project-tag">Alembic</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://fadingvisions.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://fadingvisionsapi-production.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/FadingVisionsAPI" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">userAPI</span>
+                </div>
+                <p class="project-desc">
+                  A RESTful notes API with full CRUD operations and user
+                  authentication. Demonstrates core backend fundamentals: JWT token
+                  auth, bcrypt-sha256 password hashing, Alembic schema migrations,
+                  Pydantic data validation, and SQLAlchemy ORM interaction.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">JWT</span>
+                  <span class="project-tag">Alembic</span>
+                  <span class="project-tag">Pydantic</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://userapi-production-8bfe.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/userAPI" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="contact">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Let's work together.</h2>
+          <p class="section-subtitle">
+            I'm currently open to full-time backend or software engineering roles.
+            Feel free to reach out on any platform below.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:dylanmckay8939@gmail.com" class="contact-link primary">Send an Email</a>
+            <a href="https://www.linkedin.com/in/dylanmckay04/" target="_blank" class="contact-link">LinkedIn</a>
+            <a href="https://github.com/dylanmckay04/" target="_blank" class="contact-link">GitHub</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Dylan McKay</p>
+        <ul class="footer-links">
+          <li><a href="https://github.com/dylanmckay04/" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/dylanmckay04/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
 </html>
