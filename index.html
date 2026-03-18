@@ -1,39 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="pfp.jfif">
-        <title>Dylan McKay | Software Engineer</title>
-    </head>
-    <body>
-        <header>
-            <h1>Dylan McKay | Software Engineer</h1>
-        </header>
-        <main>
-            <section id="intro">
-                <h2>About Me</h2>
-                <p>Hello, I'm Dylan McKay. I'm a software engineer with an M.S. in Software Engineering, DevOps Engineering from Western Governors University.</p>
-                <p>I am a recent graduate with a strong foundation in Python, Java, HTML, CSS, JavaScript. and SQL. I enjoy building scalable and efficient systems, and I am currently seeking full time software engineering positions.</p>
-                <p>I am open to remote positions or on-site positions located in Indiana.</p>
-                <p>If you'd like to contact me, feel free to reach out to me on any of the platforms <a href="#socials">below</a>.</p>
-                <p>You can also view some of my projects on the Projects page <a href="projects.html">here</a>.</p>
-            </section>
-            <figure id="headshot">
-                <a href="https://linkedin.com/in/dylanmckay04/" target="_blank"><img src="pfp.jfif" height="300px"></a>
-            </figure>
-            <section id="socials">
-                <h2>Social Media</h2>
-                <ul>
-                    <li><a href="https://github.com/dylanmckay04" target="_blank">GitHub Profile</a></li>
-                    <li><a href="https://www.linkedin.com/in/dylanmckay04/" target="_blank">LinkedIn Profile</a></li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Dylan McKay | All rights reserved.</p>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pfp.jfif">
+    <title>Dylan McKay | Backend Engineer</title>
+  </head>
+  <body>
+
+    <!-- Nav -->
+    <header>
+      <nav>
+        <a class="nav-logo" href="index.html">Dylan McKay</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#contact" class="cta">Hire Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <!-- Hero -->
+        <section id="hero">
+          <p class="hero-eyebrow">Backend Engineer · Python & FastAPI</p>
+          <h1 class="hero-name">Dylan McKay.<br><em>Building APIs</em><br>that scale.</h1>
+          <p class="hero-bio">
+            M.S. Software Engineering graduate specializing in backend systems,
+            RESTful API design, and full-stack Python applications. Based in Indiana,
+            open to remote and on-site opportunities.
+          </p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Get in touch</a>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">The person behind the code.</h2>
+          <div class="about-grid">
+            <div class="about-photo">
+              <img src="pfp.jfif" alt="Dylan McKay">
+            </div>
+            <div class="about-content">
+              <p>
+                I'm a backend engineer focused on building well-structured APIs and
+                full-stack applications using <strong>Python and FastAPI</strong>. I recently
+                completed my M.S. in Software Engineering from Western Governors University.
+              </p>
+              <p>
+                My work centers on designing systems that are clean, documented, and
+                built to last - from database schema decisions to deployment. I care
+                about understanding <em>why</em> something is built a certain way, not
+                just making it work.
+              </p>
+              <p>
+                I'm currently seeking my first professional engineering role where I can
+                contribute to a team, grow quickly, and ship real software.
+              </p>
+              <div class="about-details">
+                <div class="detail-row">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Indiana, USA</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Degree</span>
+                  <span class="detail-value">M.S. Software Engineering, WGU</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Focus</span>
+                  <span class="detail-value">Backend · API Design · Full-Stack</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Open to</span>
+                  <span class="detail-value">Remote or Indiana on-site</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+          <p class="section-label">Technical Skills</p>
+          <h2 class="section-title">What I work with.</h2>
+          <p class="section-subtitle">A focused stack built around Python backend development and modern web tooling.</p>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <p class="skill-group-title">Languages</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">HTML / CSS</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-title">Frameworks</p>
+              <div class="skill-tags">
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">SQLAlchemy</span>
+                <span class="skill-tag">Pydantic</span>
+                <span class="skill-tag">Alembic</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-title">Infrastructure</p>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Celery</span>
+                <span class="skill-tag">Cloudflare R2</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-title">Concepts</p>
+              <div class="skill-tags">
+                <span class="skill-tag">REST API Design</span>
+                <span class="skill-tag">JWT Auth</span>
+                <span class="skill-tag">WebSockets</span>
+                <span class="skill-tag">Testing (pytest)</span>
+                <span class="skill-tag">ORM</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects-preview">
+          <p class="section-label">Projects</p>
+          <h2 class="section-title">Selected work.</h2>
+          <p class="section-subtitle">Three projects built from scratch, deployed, and documented end to end.</p>
+          <div class="projects-list">
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">DevTrack</span>
+                  <span class="project-badge">Featured</span>
+                </div>
+                <p class="project-desc">
+                  A full-stack job application tracker with a kanban board, real-time
+                  WebSocket updates, Celery-scheduled email reminders, and document
+                  uploads to Cloudflare R2. Includes a pytest test suite.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Celery</span>
+                  <span class="project-tag">Redis</span>
+                  <span class="project-tag">WebSockets</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://dev-track-bice.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://devtrack-production-5644.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/DevTrack" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">Fading Visions</span>
+                </div>
+                <p class="project-desc">
+                  A full-stack photo gallery app for curating aesthetic collections
+                  using the Unsplash API. Features gallery management with a
+                  many-to-many join table data model and JWT authentication.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Unsplash API</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://fadingvisions.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://fadingvisionsapi-production-55df.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/FadingVisionsAPI" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <div class="project-header">
+                  <span class="project-name">userAPI</span>
+                </div>
+                <p class="project-desc">
+                  A RESTful notes API with full CRUD, JWT authentication,
+                  bcrypt-sha256 password hashing, and Alembic database migrations.
+                  The foundation project demonstrating core backend fundamentals.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">JWT</span>
+                  <span class="project-tag">Alembic</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="https://userapi-production-16d2.up.railway.app/docs" target="_blank" class="project-link">API Docs</a>
+                <a href="https://github.com/dylanmckay04/userAPI" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Let's work together.</h2>
+          <p class="section-subtitle">
+            I'm currently open to full-time backend or software engineering roles.
+            Feel free to reach out on any platform below.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:dylanmckay2004@gmail.com" class="contact-link primary">Send an Email</a>
+            <a href="https://www.linkedin.com/in/dylanmckay04/" target="_blank" class="contact-link">LinkedIn</a>
+            <a href="https://github.com/dylanmckay04/" target="_blank" class="contact-link">GitHub</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Dylan McKay</p>
+        <ul class="footer-links">
+          <li><a href="https://github.com/dylanmckay04/" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/dylanmckay04/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
 </html>
